@@ -1,155 +1,46 @@
 <!DOCTYPE html>
-
-<html>
-
-<head>
-
-    <meta charset="utf-8">
-
-    <title>CamellApp</title>
-
-    <style>
-        body {
-            height: 600px; /* popovers have a max height of 600px */
-            width: 360px;
-            padding: 0;
-            margin: 0;
-        }
-    </style>
-
-</head>
-
-<body>
-
-    <textarea>qhubo mi papá</textarea>
-
-</body>
-
-<!--<script src="popup.js"></script>-->
-
-</html>
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>CamellApp</title>
-    <link href="css/styles.css?79fef626060f3fe7be2a" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome Extension Popup</title>
+    <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-    <div id="root">
-        <section class="mx-auto h-[600px] min-h-[600px] w-[350px] bg-white">
-            <div class="flex h-full flex-col justify-between">
-                <div class="h-full overflow-y-auto overflow-x-hidden">
-                    <header class="sticky top-0 z-10 w-full bg-white">
-                        <div class="w-full">
-                            <div class="flex items-center justify-between border-b py-4 px-4">
-                                <button type="button" class="focus:outline-none">
-                                    <img class="h-6 w-auto" src="chrome-extension://pbanhockgagggenencehbnadejlgchfc/assets/logos/logo.svg" alt="Simplify Jobs">
-                                </button>
-                                <div class="flex items-center justify-between gap-1">
-                                    <button type="button" title="Report an issue" aria-label="Report an issue" class="inline-flex h-6 w-6 items-center justify-center border border-transparent rounded-md text-gray-400 hover:text-primary-darkest transition duration-150 ease-in-out focus:outline-none">
-                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M232,56V176a8,8,0,0,1-2.76,6c-15.28,13.23-29.89,18-43.82,18-18.91,0-36.57-8.74-53-16.85C105.87,170,82.79,158.61,56,179.77V224a8,8,0,0,1-16,0V56a8,8,0,0,1,2.77-6h0c36-31.18,68.31-15.21,96.79-1.12C167,62.46,190.79,74.2,218.76,50A8,8,0,0,1,232,56Z"></path>
-                                        </svg>
-                                    </button>
-                                    <button type="button" title="Settings" aria-label="Settings" class="inline-flex h-6 w-6 items-center justify-center border border-transparent rounded-md text-gray-400 hover:text-primary-darkest transition duration-150 ease-in-out focus:outline-none">
-                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M2.13127 13.6308C1.9492 12.5349 1.95521 11.434 2.13216 10.3695C3.23337 10.3963 4.22374 9.86798 4.60865 8.93871C4.99357 8.00944 4.66685 6.93557 3.86926 6.17581C4.49685 5.29798 5.27105 4.51528 6.17471 3.86911C6.9345 4.66716 8.0087 4.99416 8.93822 4.60914C9.86774 4.22412 10.3961 3.23332 10.369 2.13176C11.4649 1.94969 12.5658 1.9557 13.6303 2.13265C13.6036 3.23385 14.1319 4.22422 15.0612 4.60914C15.9904 4.99406 17.0643 4.66733 17.8241 3.86975C18.7019 4.49734 19.4846 5.27153 20.1308 6.1752C19.3327 6.93499 19.0057 8.00919 19.3907 8.93871C19.7757 9.86823 20.7665 10.3966 21.8681 10.3695C22.0502 11.4654 22.0442 12.5663 21.8672 13.6308C20.766 13.6041 19.7756 14.1324 19.3907 15.0616C19.0058 15.9909 19.3325 17.0648 20.1301 17.8245C19.5025 18.7024 18.7283 19.4851 17.8247 20.1312C17.0649 19.3332 15.9907 19.0062 15.0612 19.3912C14.1316 19.7762 13.6033 20.767 13.6303 21.8686C12.5344 22.0507 11.4335 22.0447 10.3691 21.8677C10.3958 20.7665 9.86749 19.7761 8.93822 19.3912C8.00895 19.0063 6.93508 19.333 6.17532 20.1306C5.29749 19.503 4.51479 18.7288 3.86862 17.8252C4.66667 17.0654 4.99367 15.9912 4.60865 15.0616C4.22363 14.1321 3.23284 13.6038 2.13127 13.6308ZM11.9997 15.0002C13.6565 15.0002 14.9997 13.657 14.9997 12.0002C14.9997 10.3433 13.6565 9.00018 11.9997 9.00018C10.3428 9.00018 8.99969 10.3433 8.99969 12.0002C8.99969 13.657 10.3428 15.0002 11.9997 15.0002Z"></path>
-                                        </svg>
-                                    </button>
-                                    <button type="button" title="Close this popup" aria-label="Close this popup" class="inline-flex h-6 w-6 items-center justify-center border border-transparent bg-transparent rounded-md text-gray-400 hover:text-primary-darkest transition duration-150 ease-in-out focus:outline-none">
-                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </header>
-                    <main>
-                        <div>
-                            <div>
-                                <div class="flex h-28 items-center bg-primary-base bg-hero-pattern bg-contain-small bg-right-4 bg-no-repeat">
-                                    <p class="mr-32 ml-12 text-3xl font-black text-white">Welcome to Simplify!</p>
-                                </div>
-                                <div class="px-6 pb-3">
-                                    <p class="mt-3 text-xl font-medium">Your last application ever.</p>
-                                    <p class="mt-2 text-sm text-slate-700">When the <img class="mx-1 inline h-5 w-5" src="chrome-extension://pbanhockgagggenencehbnadejlgchfc/assets/icons/favicon-128.png" alt="Simplify"> is aqua, you're on a job where Simplify can autofill your application from your Simplify profile.</p>
-                                    <p class="mt-2 text-sm text-slate-700">If the <img class="inline h-5 w-5" src="chrome-extension://pbanhockgagggenencehbnadejlgchfc/assets/icons/mono-favicon-128.png" alt="Simplify"> is gray, the job you're looking at is not yet supported.</p>
-                                </div>
-                            </div>
-                            <div class="border-t border-b border-slate-200">
-                                <div class="px-4 py-2">
-                                    <p class="text-lg font-medium text-slate-700">Recommended Jobs</p>
-                                </div>
-                            </div>
-                            <div class="my-4">
-                                <span class="block w-full">
-                                    <button type="button" class="mx-auto flex w-1/2 justify-center rounded-md border border-transparent bg-primary-darkest py-2 px-4 text-sm font-medium text-white shadow-sm transition duration-150 ease-in-out hover:bg-primary-dark focus:border-primary-darkest focus:outline-none focus:ring-4 focus:ring-primary-light active:bg-primary-darkest">Get Job Matches</button>
-                                </span>
-                            </div>
-                            <div>
-                                <div>
-                                    <div class="border-t border-b border-slate-200">
-                                        <div class="px-4 py-2">
-                                            <p class="text-lg font-medium text-slate-700">Top Companies</p>
-                                        </div>
-                                    </div>
-                                    <div class="mx-4">
-                                        <div class="mt-4 grid grid-cols-8">
-                                            <div class="col-span-7">
-                                                <form novalidate="" action="" role="search">
-                                                    <div class="flex rounded-md shadow-sm">
-                                                        <div class="relative grow focus-within:z-10">
-                                                            <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                                                                <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                                                                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
-                                                                </svg>
-                                                            </div>
-                                                            <input type="text" class="block w-full rounded-md border-gray-100 bg-gray-100 pl-10 text-base transition focus:border-primary-base focus:outline-none focus:ring-4 focus:ring-primary-lightest" placeholder="Search top companies">
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <button type="button" class="col-span-1 ml-auto text-gray-600 hover:text-gray-800 focus:outline-none">
-                                                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                        <div class="my-4">
-                                            <div class="grid grid-cols-2 gap-4">
-                                                <!-- Company buttons (16 in total) -->
-                                                <!-- Example of one company button: -->
-                                                <button type="button" class="col-span-1 transform cursor-pointer rounded-md transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg focus:outline-none">
-                                                    <div class="card-shadow flex flex-col justify-between rounded-md bg-white py-4">
-                                                        <div class="block">
-                                                            <div class="flex items-center justify-center">
-                                                                <div>
-                                                                    <img alt="100ms" src="https://storage.googleapis.com/simplify-imgs/companies/539e339e-53f8-4123-9c0e-66e22d355958/logo.png" class="h-14 w-14 rounded-md">
-                                                                </div>
-                                                            </div>
-                                                            <div class="mt-2 text-center">
-                                                                <h2 class="text-xs font-semibold line-clamp-1">100ms</h2>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </button>
-                                                <!-- More company buttons... -->
-                                            </div>
-                                            <div class="mt-4 items-center justify-center text-center">
-                                                <button type="button" class="inline-flex items-center justify-center rounded-full border border-transparent bg-primary-darkest px-3 py-2 text-sm font-medium leading-4 text-white shadow-sm transition duration-150 ease-in-out hover:bg-primary-dark focus:border-primary-darkest focus:outline-none focus:ring-4 focus:ring-primary-light active:bg-primary-darkest">More Companies</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </main>
+    <header class="sticky top-0 z-10 w-full bg-white">
+        <div class="w-full">
+            <div class="flex items-center justify-between border-b py-4 px-4">
+                <button type="button" class="focus:outline-none">
+                    <img class="h-6 w-auto" src="camellologo.svg" alt="CamellApp">
+                </button>
+                <div class="flex items-center justify-between gap-1">
+                    <button type="button" title="Report an issue" aria-label="Report an issue" class="icon-button">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M232,56V176a8,8,0,0,1-2.76,6c-15.28,13.23-29.89,18-43.82,18-18.91,0-36.57-8.74-53-16.85C105.87,170,82.79,158.61,56,179.77V224a8,8,0,0,1-16,0V56a8,8,0,0,1,2.77-6h0c36-31.18,68.31-15.21,96.79-1.12C167,62.46,190.79,74.2,218.76,50A8,8,0,0,1,232,56Z"></path></svg>
+                    </button>
+                    <button type="button" title="Settings" aria-label="Settings" class="icon-button">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M2.13127 13.6308C1.9492 12.5349 1.95521 11.434 2.13216 10.3695C3.23337 10.3963 4.22374 9.86798 4.60865 8.93871C4.99357 8.00944 4.66685 6.93557 3.86926 6.17581C4.49685 5.29798 5.27105 4.51528 6.17471 3.86911C6.9345 4.66716 8.0087 4.99416 8.93822 4.60914C9.86774 4.22412 10.3961 3.23332 10.369 2.13176C11.4649 1.94969 12.5658 1.9557 13.6303 2.13265C13.6036 3.23385 14.1319 4.22422 15.0612 4.60914C15.9904 4.99406 17.0643 4.66733 17.8241 3.86975C18.7019 4.49734 19.4846 5.27153 20.1308 6.1752C19.3327 6.93499 19.0057 8.00919 19.3907 8.93871C19.7757 9.86823 20.7665 10.3966 21.8681 10.3695C22.0502 11.4654 22.0442 12.5663 21.8672 13.6308C20.766 13.6041 19.7756 14.1324 19.3907 15.0616C19.0058 15.9909 19.3325 17.0648 20.1301 17.8245C19.5025 18.7024 18.7283 19.4851 17.8247 20.1312C17.0649 19.3332 15.9907 19.0062 15.0612 19.3912C14.1316 19.7762 13.6033 20.767 13.6303 21.8686C12.5344 22.0507 11.4335 22.0447 10.3691 21.8677C10.3958 20.7665 9.86749 19.7761 8.93822 19.3912C8.00895 19.0063 6.93508 19.333 6.17532 20.1306C5.29749 19.503 4.51479 18.7288 3.86862 17.8252C4.66667 17.0654 4.99367 15.9912 4.60865 15.0616C4.22363 14.1321 3.23284 13.6038 2.13127 13.6308ZM11.9997 15.0002C13.6565 15.0002 14.9997 13.657 14.9997 12.0002C14.9997 10.3433 13.6565 9.00018 11.9997 9.00018C10.3428 9.00018 8.99969 10.3433 8.99969 12.0002C8.99969 13.657 10.3428 15.0002 11.9997 15.0002Z"></path></svg>
+                    </button>
+                    <button type="button" title="Close this popup" aria-label="Close this popup" class="icon-button">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
                 </div>
-                <footer class="sticky bottom-0 flex h-16 shrink-0 items-center justify-around border-t bg-stone-50">
-                    <button class="px-6 py-3 focus:outline-none text-black " type="button" title="Home">
-                        <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div id="home" class="tab-content active">
+            <h2>Casa Camellosa</h2>
+            <p>Zona de Araganeo</p>
+        </div>
+        <div id="profile" class="tab-content">
+            <h2>Perfil</h2>
+            <p>Paula moment</p>
+        </div>
+    </div>
+    <div class="tabs">
+        <div class="tab active" data-tab="home">Home</div>
+        <div class="tab" data-tab="profile">Profile</div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

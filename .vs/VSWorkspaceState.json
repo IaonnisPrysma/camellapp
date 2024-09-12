@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\images",
+    "\\popup"
   ],
+  "SelectedNode": "\\manifest.json",
   "PreviewInSolutionExplorer": false
 }
