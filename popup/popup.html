@@ -29,17 +29,64 @@
     </header>
     <div class="content">
         <div id="home" class="tab-content active">
-            <h2>Casa Camellosa</h2>
-            <p>Zona de Araganeo</p>
+            <div class="text-zone">
+                Aplica con Camellapp, la información de tu perfil se completará automáticamente
+            </div>
+        
+            <div class="divider"></div>
+        
+            <div class="cyan-zone">
+                Camellapp se ha sincronizado exitosamente
+            </div>
+        
+            <div class="image-container">
+                <img src="placeholder1.jpg" alt="Image 1" class="small-image">
+                <img src="placeholder2.jpg" alt="Image 2" class="small-image">
+            </div>
+        
+            <button class="blue-button">
+                Get Started
+            </button>
         </div>
+
         <div id="profile" class="tab-content">
-            <h2>Perfil</h2>
-            <p>Paula moment</p>
+            <div class="profile-container">
+                <button class="blue-button profile-button">
+                    Edit Profile
+                </button>
+            
+                <img src="iconsMenu/UserOFF.svg" alt="Profile Picture" class="profile-pic">
+            
+                <h2 class="profile-name">DromeDario Gomez</h2>
+            
+                <div class="profile-data">
+                    <div class="profile-data-item">
+                        <div class="profile-data-label">Posts</div>
+                        <div class="profile-data-value">24</div>
+                    </div>
+                    <div class="profile-data-item">
+                        <div class="profile-data-label">Following</div>
+                        <div class="profile-data-value">142</div>
+                    </div>
+                    <div class="profile-data-item">
+                        <div class="profile-data-label">Followers</div>
+                        <div class="profile-data-value">831</div>
+                    </div>
+                </div>
+            
+                <div class="blue-divider"></div>
+            </div>
         </div>
     </div>
     <div class="tabs">
-        <div class="tab active" data-tab="home">Home</div>
-        <div class="tab" data-tab="profile">Profile</div>
+        <div class="tab active" data-tab="home">
+            <img src="iconsMenu/HomeON.svg" alt="Home" class="icon-active">
+            <img src="iconsMenu/HomeOFF.svg" alt="Home" class="icon-inactive">
+        </div>
+        <div class="tab" data-tab="profile">
+            <img src="iconsMenu/UserON.svg" alt="Profile" class="icon-active">
+            <img src="iconsMenu/UserOFF.svg" alt="Profile" class="icon-inactive">
+        </div>
     </div>
     <script src="popup.js"></script>
 </body>
