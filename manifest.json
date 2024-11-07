@@ -17,6 +17,14 @@
     "matches": ["<all_urls>"]
   }],
   "permissions": [
-    "tabs"
+    "tabs",
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["popup/content.js"]
+    }
   ]
 }
