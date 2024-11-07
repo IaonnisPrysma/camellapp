@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\images",
-    "\\popup",
-    "\\scripts"
+    "\\images\\png",
+    "\\popup"
   ],
-  "SelectedNode": "\\popup\\popup.html",
+  "SelectedNode": "\\popup\\camellologo.svg",
   "PreviewInSolutionExplorer": false
 }

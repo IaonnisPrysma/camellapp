@@ -17,4 +17,21 @@ document.addEventListener('DOMContentLoaded', function () {
             tab.classList.add('active');
         });
     });
+
+    // Add event listener for the "Editar Perfil" button
+    const editProfileButton = document.getElementById('edit-profile-button');
+    if (editProfileButton) {
+        editProfileButton.addEventListener('click', () => {
+            const url = chrome.runtime.getURL('popup/index.html'); // Get the full URL
+            chrome.tabs.create({ url: url }); // Opens in a new tab
+        });
+    }
+
+    // Add event listener for the "Close this popup" button
+    const closePopupButton = document.getElementById('close-popup-button');
+    if (closePopupButton) {
+        closePopupButton.addEventListener('click', () => {
+            window.close(); // Closes the popup
+        });
+    }
 });

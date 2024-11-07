@@ -1,7 +1,7 @@
 {
   "name": "CamellApp",
   "description": "Base Level Extension",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "manifest_version": 3,
   "action": {
     "default_popup": "popup/popup.html"
@@ -11,5 +11,12 @@
     "32": "images/png/icon32.png",
     "48": "images/png/icon48.png",
     "128": "images/png/icon128.png"
-  }
+  },
+  "web_accessible_resources": [{
+    "resources": ["popup/*"],
+    "matches": ["<all_urls>"]
+  }],
+  "permissions": [
+    "tabs"
+  ]
 }

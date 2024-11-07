@@ -2,7 +2,6 @@ html {
     border-radius: 10px;
     overflow: hidden;
 }
-
 body {
     width: 300px;
     height: 400px;
@@ -13,49 +12,46 @@ body {
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-
 header {
     border-bottom: 1px solid #e5e7eb;
 }
-
 .content {
     flex-grow: 1;
-    padding: 20px;
+    padding-top: 0; /* No padding on top */
+    padding-right: 20px;
+    padding-bottom: 60px; /* Ensure space for tabs */
+    padding-left: 20px;
     overflow-y: auto;
 }
 
 .tab-content {
     display: none;
 }
-
-    .tab-content.active {
-        display: block;
-    }
-
+.tab-content.active {
+    display: block;
+}
 .tabs {
     display: flex;
     background-color: #f0f0f0;
     border-top: 1px solid #ddd;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
-
 .tab {
     flex: 1;
     text-align: center;
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
-    /* Remove any positioning that might interfere */
-    position: relative;
 }
-
-    .tab:hover {
-        background-color: #e0e0e0;
-    }
-
-    .tab.active {
-        background-color: #fff;
-        border-top: 2px solid #4CAF50;
-    }
+.tab:hover {
+    background-color: #e0e0e0;
+}
+.tab.active {
+    background-color: #fff;
+    border-top: 2px solid #5e2888;
+}
 
 /* Ensure rounded corners are visible */
 .tabs {
@@ -154,27 +150,19 @@ header button {
 .tab img {
     width: 24px;
     height: 24px;
-    /* Remove the positioning that was causing the right alignment */
-    position: static;
-    transform: none;
-    /* Ensure inline centering works */
     vertical-align: middle;
     margin: 0 auto;
     display: block;
 }
-
 .tab .icon-active {
     display: none;
 }
-
 .tab .icon-inactive {
     display: block;
 }
-
 .tab.active .icon-active {
     display: block;
 }
-
 .tab.active .icon-inactive {
     display: none;
 }
@@ -195,12 +183,12 @@ header button {
 }
 
 .cyan-zone {
-    background-color: #e0f7fa;
+    background-color: #EBD1FF;
     padding: 0.75rem;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
     font-size: 0.875rem;
-    color: #0288d1;
+    color: #5E2888;
 }
 
 .image-container {
@@ -217,20 +205,46 @@ header button {
 }
 
 .blue-button {
-    background-color: #2196f3;
+    background-color: #5e2888;
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     border: none;
-    width: 100%;
+    width: auto; /* Change to auto if you don't want it to take the full width */
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(33,150,243,0.3);
+    box-shadow: 0 2px 4px rgba(94,40,136,0.3);
     transition: transform 0.2s;
 }
 
+.complete-button {
+    background-color: #5e2888;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(94,40,136,0.3);
+    transition: transform 0.2s;
+}
+
+.parent-container {
+    display: flex;
+    justify-content: right;
+    align-items: right; /* Optional: centers the button vertically as well */
+    height: 100%; /* Optional: ensures the container takes the full height of its parent */
+}
+
+.parent-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Optional: centers the button vertically as well */
+    height: 100%; /* Optional: ensures the container takes the full height of its parent */
+}
+
+
 .blue-button:hover {
     transform: translateY(-1px);
-    box-shadow: 0 4px 6px rgba(33,150,243,0.4);
+    box-shadow: 0 4px 6px rgba(94,40,136,0.6);
 }
 
 /* Profile tab specific styles */
@@ -261,6 +275,7 @@ header button {
 
 .profile-data {
     display: flex;
+    flex-direction: column; /* Stack items vertically */
     justify-content: space-between;
     margin: 1rem 0;
 }
@@ -268,20 +283,30 @@ header button {
 .profile-data-item {
     text-align: center;
     flex: 1;
+    margin-bottom: 1rem; /* Add some space between items */
 }
 
 .profile-data-label {
-    font-size: 0.75rem;
-    color: #6b7280;
+    font-size: 1.2rem;
+    color: #5e2888;
 }
 
 .profile-data-value {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 500;
 }
 
+.profile-data-value1 {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: #1E90FF; /* Dodger Blue */
+}
+
+
 .blue-divider {
     height: 2px;
-    background-color: #2196f3;
+    background-color: #5e2888;
     margin: 1rem 0;
+    width: 100%; /* Make it span the full width */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
